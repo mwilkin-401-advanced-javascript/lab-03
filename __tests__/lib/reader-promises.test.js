@@ -2,9 +2,23 @@
 
 jest.mock('fs');
 
-const reader = require('../../lib/reader.js');
+//we have a function that takes an array of things
+
+const readerPromises = require('../../lib/reader-promises.js');
 
 describe('File Reader Module', () => {
+//check for empty array, 1 item, and 2 items
+
+   it('when given a bad file, returns an error', done => {
+    let files = ['bad.txt'];
+   
+    return reader(files, (err,data) => {
+      expect(err).toBeDefined();
+      .then(result => {
+        expect(result).toEqual(data);
+      });
+    });
+  });
 
   it('when given a bad file, returns an error', done => {
     let files = ['bad.txt'];
