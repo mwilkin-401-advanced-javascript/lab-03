@@ -1,6 +1,9 @@
 # Lab-03 Async lab
 
+[![Build Status](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-03.svg?branch=master)](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-03)
+
 ### Author: Matt Wilkin
+
 
 ### Links and Resources
 [submission PR](https://github.com/mwilkin-401-advanced-javascript/lab-03/pull/1)
