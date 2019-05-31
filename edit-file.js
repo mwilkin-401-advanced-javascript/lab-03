@@ -15,40 +15,22 @@ if(args.length < 2){
 let sourceFile = args[2];
 
 
-// // Else, do work
-// for(let i = 0; i < args.length; i++){
-//   console.log(args[i]);
-// }
+// Else, do work
+for(let i = 0; i < args.length; i++){
+  console.log(args[i]);
+}
 
-// fs.readFile(sourceFile, 'utf8', (err, data) => {
-//   if (err) throw err;
-//   console.log('data length', data.length);
-//   console.log(`Before ${data}`);
-//   let randomValue = Math.floor(Math.random()*100) +1;
-//    data = randomValue;
 
-//     fs.writeFile(sourceFile, data, (err) => {
-//       if (err) throw err;
-//       console.log('The file has been saved!');
-//     });
-
-//     fs.readFile(sourceFile, 'utf8', (err, data) => {
-//     if (err) throw err;
-//     console.log('data length', data.length);
-//     console.log(`After ${data}`);
-//   });
-// });
-
-fs.readFile(sourceFile, 'utf8', (err, data) => {
+fs.readFile(`${sourceFile}`, 'utf8', (err, data) => {
   let randomValue = Math.floor(Math.random()*100) +1;
   data = randomValue;
   if (err) throw err;
   console.log('data length', data.length);
   console.log(`Before ${data}`);
-    fs.writeFile(sourceFile, data, (err) => {
+    fs.writeFile(`${sourceFile}`, data, (err) => {
       if (err) throw err;
       console.log('The file has been saved!');
-      fs.readFile(sourceFile, 'utf8', (err, data) => {
+      fs.readFile(`${sourceFile}`, 'utf8', (err, data) => {
         if (err) throw err;
         console.log('data length', data.length);
         console.log(`After ${data}`);
