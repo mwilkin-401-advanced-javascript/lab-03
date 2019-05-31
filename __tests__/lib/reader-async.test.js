@@ -17,7 +17,7 @@ describe('File Reader Module', () => {
   });
 
   it('reads 3 files', async () => {
-    let files = ['File Contents', 'File Contents', 'File Contents'];
+    let files = ['1.txt', '2.txt', '3.txt'];
     try{
       let result = await readerAsync(files);
       expect(result).toEqual(files);
