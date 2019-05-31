@@ -19,8 +19,8 @@ describe('File Reader Module', () => {
     let files = ['File Contents', 'File Contents', 'File Contents'];
     return readerPromises(files)
       .then(result => {
-        expect(result).toEqual(files);
-
+        expect(result).toEqual(files)
+          .catch(err => expect(err).toBeDefined());
       });      
   });
 });
