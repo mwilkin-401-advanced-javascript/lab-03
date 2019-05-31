@@ -16,15 +16,14 @@ describe('File Reader Module', () => {
     }
   });
 
-
-  // it('reads 3 files', done => {
-  //   let files = ['file1.txt', 'file2.txt', 'file2.txt'];
-  //   reader(files, (err,data) => {
-  //     expect(err).toBeNull();
-  //     expect(data instanceof Array ).toBeTruthy();
-  //     expect(data.length ).toBe(3);
-      
-  //   });
-  // });
-
+  it('reads 3 files', async () => {
+    let files = ['file1.txt', 'file2.txt', 'file2.txt'];
+    try{
+      let result = await readerAsync(files);
+      expect(result).toEqual(files);
+    }
+    catch(err){
+      console.log(`In catch statement with ${err} message`);
+    }
+  });
 });
